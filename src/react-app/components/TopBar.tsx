@@ -1,7 +1,6 @@
 import React from "react";
 import { useHeadersContext } from "@src/react-app/components/contexts/HeadersContext";
 import MailLockIcon from "@mui/icons-material/MailLockOutlined";
-import { LogoSvg } from "@src/react-app/components/LogoSvg";
 import { useIsMac } from "@src/react-app/components/hooks/useIsMac";
 import { Chevron } from "@src/react-app/components/Chevron";
 import Search from "@mui/icons-material/Search";
@@ -32,8 +31,7 @@ export function TopBar({
           )}
         </button>
         <span className="flex flex-row items-center text-lg font-bold font-mono">
-          <LogoSvg className="rounded-lg w-10 h-10 mr-2" />
-          tRPC.panel()
+          Jobs
         </span>
       </div>
       <RouterSearchTooltip />
