@@ -24,21 +24,21 @@ export default [
       // commonjs(),
     ],
     output: [
-      { file: "lib/index.js", format: "cjs" },
-      { file: "lib/index.mjs", format: "es" },
+      { file: "dist/index.js", format: "cjs" },
+      { file: "dist/index.mjs", format: "es" },
     ],
   },
   {
     input: "src/react-app/index.tsx",
     output: {
-      file: "lib/react-app/bundle.js",
+      file: "dist/react-app/bundle.js",
       format: "umd",
       sourcemap: true,
       name: "trpc-panel",
     },
     plugins: [
       postcss({
-        extract: path.resolve("lib/react-app/index.css"),
+        extract: path.resolve("dist/react-app/index.css"),
       }),
       nodeResolve({
         extensions: [".js", ".ts", ".tsx", "ts"],
@@ -63,7 +63,7 @@ export default [
         targets: [
           {
             src: "src/react-app/index.html",
-            dest: "lib/react-app",
+            dest: "dist/react-app",
           },
         ],
       }),

@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "lib": ["ESNext", "dom", "ES2022"],
-    "outDir": "lib",
+    "outDir": "dist",
     "removeComments": true,
     "target": "ES6",
     "declaration": true,
@@ -26,6 +26,6 @@
       "@src/*": ["./src/*"]
     }
   },
-  "exclude": ["node_modules/**/*", "lib/**/*"],
+  "exclude": ["node_modules/**/*", "dist/**/*"],
   "include": ["./src/**/*"]
 }

@@ -2,9 +2,9 @@
   "name": "trpc-panel",
   "version": "1.0.2",
   "description": "UI for testing tRPC backends",
-  "main": "lib/index.js",
-  "module": "lib/index.mjs",
-  "typings": "lib/src/index.d.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "typings": "dist/src/index.d.ts",
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watchAll",
@@ -15,17 +15,17 @@
   "license": "ISC",
   "exports": {
     ".": {
-      "types": "./lib/src/index.d.ts",
-      "import": "./lib/index.mjs",
-      "require": "./lib/index.js",
-      "default": "./lib/index.js"
+      "types": "./dist/src/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "default": "./dist/index.js"
     }
   },
   "files": [
-    "lib/"
+    "dist/"
   ],
   "directories": {
-    "lib": "lib"
+    "dist": "dist"
   },
   "peerDependencies": {
     "@trpc/server": "^10.0.0",
