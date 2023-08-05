@@ -18,6 +18,7 @@ const defaultParseRouterOptions: Partial<TrpcPanelExtraOptions> = {
 };
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
+console.log("__dirname", __dirname, process.cwd())
 const javascriptReplaceSymbol = "{{js}}";
 const cssReplaceSymbol = "{{css}}";
 const routerReplaceSymbol = '"{{parsed_router}}"';
