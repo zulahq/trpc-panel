@@ -1,8 +1,6 @@
 'use strict';
 
 var fs = require('fs');
-var node_url = require('node:url');
-var node_path = require('node:path');
 var zod = require('zod');
 var zodToJsonSchema = require('zod-to-json-schema');
 
@@ -345,8 +343,7 @@ const defaultParseRouterOptions = {
     logFailedProcedureParse: true,
     transformer: "superjson",
 };
-const __dirname$1 = node_path.dirname(node_url.fileURLToPath((typeof document === 'undefined' ? require('u' + 'rl').pathToFileURL(__filename).href : (document.currentScript && document.currentScript.src || new URL('index.js', document.baseURI).href))));
-console.log("__dirname", __dirname$1, process.cwd());
+const __dirname$1 = '/app/node_modules/trpc-panel/dist';
 const javascriptReplaceSymbol = "{{js}}";
 const cssReplaceSymbol = "{{css}}";
 const routerReplaceSymbol = '"{{parsed_router}}"';

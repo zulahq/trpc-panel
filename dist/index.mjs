@@ -1,6 +1,4 @@
 import fs from 'fs';
-import { fileURLToPath } from 'node:url';
-import { dirname } from 'node:path';
 import { z, ZodFirstPartyTypeKind } from 'zod';
 import { zodToJsonSchema } from 'zod-to-json-schema';
 
@@ -343,8 +341,7 @@ const defaultParseRouterOptions = {
     logFailedProcedureParse: true,
     transformer: "superjson",
 };
-const __dirname = dirname(fileURLToPath(import.meta.url));
-console.log("__dirname", __dirname, process.cwd());
+const __dirname = '/app/node_modules/trpc-panel/dist';
 const javascriptReplaceSymbol = "{{js}}";
 const cssReplaceSymbol = "{{css}}";
 const routerReplaceSymbol = '"{{parsed_router}}"';
