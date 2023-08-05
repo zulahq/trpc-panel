@@ -56,7 +56,7 @@ export function ProcedureForm({
   const context = trpc.useContext();
 
   function getProcedure() {
-    var cur: typeof trpc | typeof trpc[string] = trpc;
+    var cur: typeof trpc | (typeof trpc)[string] = trpc;
     for (var p of procedure.pathFromRootRouter) {
       // TODO - Maybe figure out these typings?
       //@ts-ignore
@@ -189,7 +189,7 @@ export function ProcedureForm({
               )}
 
               <ProcedureFormButton
-                text={`Execute ${name}`}
+                text={"Execute"}
                 colorScheme={"neutral"}
                 loading={query.fetchStatus === "fetching" || mutation.isLoading}
               />
