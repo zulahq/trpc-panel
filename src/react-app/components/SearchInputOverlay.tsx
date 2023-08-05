@@ -2,7 +2,6 @@ import { useAllPaths } from "@src/react-app/components/contexts/AllPathsContext"
 import { useEnableInputGlobalHotkeys } from "@src/react-app/components/contexts/HotKeysContext";
 import { useSearch } from "@src/react-app/components/contexts/SearchStore";
 import { useSiteNavigationContext } from "@src/react-app/components/contexts/SiteNavigationContext";
-import { ItemTypeIcon } from "@src/react-app/components/ItemTypeIcon";
 import fuzzysort from "fuzzysort";
 import React, {
   useMemo,
@@ -171,9 +170,6 @@ function SearchInput() {
                 id={"search-result-" + i}
                 onClick={() => pathSelectedHandler(i)}
               >
-                <ItemTypeIcon
-                  colorScheme={paths.colorSchemeForNode[e.target]!}
-                />
                 {e.target}
               </button>
             </li>

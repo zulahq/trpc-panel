@@ -7,8 +7,6 @@ import {
   useSiteNavigationContext,
 } from "@src/react-app/components/contexts/SiteNavigationContext";
 import { Chevron } from "@src/react-app/components/Chevron";
-import { colorSchemeForNode } from "@src/react-app/components/style-utils";
-import { ItemTypeIcon } from "@src/react-app/components/ItemTypeIcon";
 export function SideNav({
   rootRouter,
   open,
@@ -53,7 +51,6 @@ function SideNavItem({
           onClick={onClick}
         >
           <span className="flex flex-row items-start">
-            <ItemTypeIcon colorScheme={colorSchemeForNode(node)} />
             {path[path.length - 1]}
           </span>
 

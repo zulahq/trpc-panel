@@ -71,10 +71,7 @@ export function CollapsableSection({
           onClick={() => collapsables.toggle(fullPath)}
           className="flex flex-row justify-between items-center p-1 "
         >
-          <span className="flex flex-row">
-            <SectionTypeLabel className="mr-2" sectionType={sectionType} />
-            {titleElement}
-          </span>
+          <span className="flex flex-row">{titleElement}</span>
 
           <Chevron
             className={"w-4 h-4 mr-2 animate-transform transition-transform"}
